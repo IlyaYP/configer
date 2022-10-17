@@ -9,7 +9,7 @@ import logging
 #if not isinstance(numeric_level, int):
 #    raise ValueError('Invalid log level: %s' % loglevel)
 
-logging.basicConfig(filename='/var/log/configer.log', filemode='w', 
+logging.basicConfig(filename='/var/log/configer.log', filemode='a', 
         format='%(asctime)s %(message)s', level=logging.INFO)
 
 mypath = "/home/ftp/cfg"
