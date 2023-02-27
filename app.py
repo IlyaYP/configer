@@ -2,7 +2,7 @@ import re
 import shutil
 from os import listdir
 from os.path import isfile, join, getmtime
-from git import Repo
+from git.repo import Repo
 import logging
 
 #numeric_level = getattr(logging, loglevel.upper(), None)
@@ -17,7 +17,8 @@ onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 #logging.debug(f'Values {sorted(onlyfiles)}')
 
 
-hostname = re.compile('(.*[A-z0-9])--?([A-Za-z]{3}--?\d\d?-202\d)-(\d\d-\d\d-\d\d)-MSK-(\d+)$',re.IGNORECASE)
+hostname = re.compile('(.*[A-z0-9])-[-\.]?([A-Za-z]{3}--?\d\d?-202\d)-(\d\d-\d\d-\d\d)-MSK-(\d+)$',
+                      re.IGNORECASE)
 configs = {}
 
 for file in onlyfiles:
