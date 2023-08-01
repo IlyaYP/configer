@@ -17,7 +17,7 @@ onlyfiles = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 #logging.debug(f'Values {sorted(onlyfiles)}')
 
 
-hostname = re.compile('(.*[A-z0-9])-[-\.]?([A-Za-z]{3}--?\d\d?-202\d)-(\d\d-\d\d-\d\d)-MSK-(\d+)$',
+hostname = re.compile('(.*[A-z0-9])-[-\.]?([A-Za-z]{3}--?\d\d?-202\d)-(\d\d[-:]\d\d[-:]\d\d)-MSK-(\d+)$',
                       re.IGNORECASE)
 configs = {}
 
